@@ -1,0 +1,14 @@
+// @import "./customer.scss";
+// @import "./reservation.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+   }
+   .App {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+   }
