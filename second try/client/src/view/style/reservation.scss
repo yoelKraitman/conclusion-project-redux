@@ -1,0 +1,88 @@
+.container {
+    display: flex;
+    
+    .reservation--container {
+        height: 95vh;
+        width: 20vw;
+
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        background-color: aqua;
+        border-right: 2px solid black;
+
+        &__card {
+            position: relative;
+
+            left: -10px;
+            border: 4px solid black;
+            margin: 10px;
+            width: 100%;
+            padding: 0.5rem;
+
+            background-color: cadetblue;
+            text-align: center;
+
+           
+        }
+
+        &__input {
+            width: 100%;
+            position: absolute;
+            left: -15px;
+            bottom: 0;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            gap: 0;
+
+            input,
+            button{
+                position: relative;
+                left: -14px;
+                width: 100%;
+                height: 100%;
+            }
+            input{
+                border-bottom-left-radius: 25%;
+                border-top-left-radius: 25%;
+            }
+            button{
+                border-bottom-right-radius: 35%;
+                border-top-right-radius: 35%;
+
+                &:hover{
+                    background-color: azure;
+                }
+            }
+        }
+        h3{
+            text-align: center;
+        }
+
+
+    }
+}
+.deleteVReservationCard{
+    // position: relative;
+    height: 110%;
+    font-size: larger;
+    position: absolute;
+    left: -20px;
+    bottom: -16.63px;
+    &:hover{
+      background-color:rgb(166, 147, 122);
+    }
+}
+.addVReservationCard{
+    // position: relative;
+    // display: block;
+    height: 110%;
+    font-size: larger;
+    position: absolute;
+    right: -20px;
+    bottom: -16.63px;
+    &:hover{
+      background-color:rgb(166, 147, 122);
+    }
+}

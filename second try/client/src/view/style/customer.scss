@@ -1,0 +1,28 @@
+    .customer--container {
+        height: 95vh;
+        width: 70vw;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: blue;
+
+        h2 {
+            text-align: center;
+        }
+
+        &__card {
+
+            border: 1px solid black;
+            width: 60vw;
+            padding-bottom: 4.4rem;
+            margin: 1% auto;
+
+            &--name {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 1.4rem;
+            }
+
+        }
+
+    }
