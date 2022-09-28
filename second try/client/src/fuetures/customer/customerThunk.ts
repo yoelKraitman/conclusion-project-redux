@@ -45,4 +45,39 @@ export const deleteCustomerFromTheServer = createAsyncThunk(
         }
     }
 );
+export const saveFood = createAsyncThunk(
+    // whice name I want the he will save
+    "customer/save-food",
+    // now I start to build the function
+    async ({ inputCustomerFood, id }: any) => {
+        const { data } = await axios.post('/customer/save-food', { inputCustomerFood, id });    // localhost:3000/reservation/....    
+
+        const { allCustomers, ok } = data;
+
+        if (ok) {
+            return allCustomers;
+        }
+
+    }
+
+);
+
+export const deleteFoodFromCustomer = createAsyncThunk(
+    // whice name I want the he will save
+    "customer/delete-food",
+    // now I start to build the function
+    async ({ id  , customerId}: any) => {
+
+        const { data } = await axios.delete('/customer/delete-food', { data: { id , customerId}  })
+
+        const {allCustomer , ok } = data; 
+
+        if(ok){
+            return allCustomer;
+        }
+
+
+    }
+
+);
 

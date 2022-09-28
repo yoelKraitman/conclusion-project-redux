@@ -1,7 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { stat } from "fs";
 import { useSelector } from "react-redux";
 import { RootState } from "../../app/store";
-import { deleteCustomerFromTheServer, getCustomers, saveCustomer } from "./customerThunk";
+import { deleteCustomerFromTheServer, deleteFoodFromCustomer, getCustomers, saveCustomer, saveFood } from "./customerThunk";
 
 export enum Status {
     IDEL = "idel",
@@ -28,8 +29,8 @@ export const customersSlice = createSlice({
     name: "customer",// we can call how we want
     initialState,
     reducers: {
-        AddCustomer(state, action: any){
-                
+        AddClient(state, action: any) {
+            // state.value =      
         }
     },
     extraReducers: (builder) => {
@@ -69,8 +70,32 @@ export const customersSlice = createSlice({
                 state.status = Status.FAILED
             })
 
+            .addCase(saveFood.pending, (state) => {
+                state.status = Status.LOADING
+            })
+            .addCase(saveFood.fulfilled, (state, action: any) => {
+                state.status = Status.IDEL
+
+                state.value = action.payload;
+
+            })
+            .addCase(saveFood.rejected, (state) => {
+                state.status = Status.FAILED
+            })
+            .addCase(deleteFoodFromCustomer.pending, (state) => {
+                state.status = Status.LOADING
+            })
+            .addCase(deleteFoodFromCustomer.fulfilled, (state, action: any) => {
+                state.status = Status.IDEL
+
+                state.value = action.payload;
+
+            })
+            .addCase(deleteFoodFromCustomer.rejected, (state) => {
+                state.status = Status.FAILED
+            })
     }
 })
 export const customers = (state: RootState) => state.customers.value;
-export const { AddCustomer } = customersSlice.actions;
+// export const { AddCustomer } = customersSlice.actions;
 export default customersSlice.reducer; // we need to export the all slice

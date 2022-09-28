@@ -12,17 +12,37 @@
         }
 
         &__card {
-
             border: 1px solid black;
-            width: 60vw;
-            padding-bottom: 4.4rem;
-            margin: 1% auto;
 
+            // width: 40vw;
+            // height: 14vh;
+            // padding-bottom: 4.4rem;
+            // margin: 1% auto;
             &--name {
+                display: inline;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                border: 2.5px double rgb(127, 76, 76);
                 font-size: 1.4rem;
             }
 
+            &--food {
+                
+                &--foods {
+                    display: flex;
+
+                }
+            }
+
+
+
         }
+
+    }
+
+    .deleteFood {
+        position: relative;
+        // bottom: 0;
+
+        top: -40px;
 
     }

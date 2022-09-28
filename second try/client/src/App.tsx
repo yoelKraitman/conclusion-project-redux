@@ -9,6 +9,7 @@ import axios from 'axios';
 import { getCustomers, saveCustomer } from './fuetures/customer/customerThunk';
 import { customers } from './fuetures/customer/customerSlice';
 import CustomerCard from './view/components/CustomerCard';
+import CardFood from './view/components/CardFood';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
   const customers = useSelector((state: RootState) => state.customers.value)
   const [customerName, setCustomerName] = useState('');
+  
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
@@ -53,9 +55,10 @@ function App() {
         </div>
 
       </div>
-      <div>
+      <div className='customer--container '>
+        <h2>Customers</h2>
         {customers.map((customer: any) => {
-          return <CustomerCard name={customer.name} food={customer.food} />
+          return <CustomerCard customer = {customer} />
         })}
       </div>
 
