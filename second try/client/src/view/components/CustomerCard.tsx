@@ -5,11 +5,6 @@ import { AppDispatch } from '../../app/store';
 import { deleteFoodFromCustomer, saveFood } from '../../fuetures/customer/customerThunk';
 
 interface CustomerCardProp {
-    // name: string,
-    // food: {
-    //     foods: string[]
-    //     id: string,
-    // }
 
     customer: {
         name: string,
