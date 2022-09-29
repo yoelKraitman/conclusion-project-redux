@@ -4,7 +4,6 @@ import { saveName , getCustomers , deleteName, saveFood , deleteFood} from '../c
 
 const router = express.Router();
  
-// import functions 
 router
 .post('/save-name' , saveName)
 .post('/delete-name' , deleteName)

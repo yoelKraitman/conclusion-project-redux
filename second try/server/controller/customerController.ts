@@ -27,8 +27,6 @@ export const getCustomers = async (req, res) => {
     try {
         const customers = await Customer.find();
 
-        // to looking for all customers 
-
         if (customers) {
             res.send({ ok: true, customers })
         }

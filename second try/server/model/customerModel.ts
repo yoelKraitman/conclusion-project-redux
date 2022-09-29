@@ -13,7 +13,7 @@ const foodSchema = new mongoose.Schema({
     ],
 })
 const customerSchema = new mongoose.Schema({
-    name: String,// it's need to be the same ( not name => reservationName)
+    name: String,
     food: foodSchema
 });
 

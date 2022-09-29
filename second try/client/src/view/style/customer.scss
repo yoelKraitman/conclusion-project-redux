@@ -1,48 +1,88 @@
     .customer--container {
+        overflow: auto;
         height: 95vh;
-        width: 70vw;
+        width: 100vw;
 
         display: flex;
         flex-direction: column;
 
-        background-color: blue;
 
         h2 {
             text-align: center;
         }
 
+
         &__card {
+            border-style: inset;
+            height: 20vh;
             border: 1px solid black;
+            width: fit-content;
+            box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.171);
 
-            // width: 40vw;
-            // height: 14vh;
-            // padding-bottom: 4.4rem;
-            // margin: 1% auto;
-            &--name {
-                display: inline;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                border: 2.5px double rgb(127, 76, 76);
-                font-size: 1.4rem;
-            }
+            &__input {
+                height: fit-content;
 
-            &--food {
-                
-                &--foods {
-                    display: flex;
+                input {
+                    width: 100%;
+                    height: 10vh;
 
+                }
+
+                button {
+                    cursor: pointer;
+
+                    width: 100%;
+                }
+
+                input,
+                button {
+                    bottom: 0;
+                    margin: 0;
                 }
             }
 
+            &--name {
+                display: inline;
 
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                border: 2.5px double rgb(127, 76, 76);
+                font-size: 1.4rem;
+                box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.171);
+            }
 
+            &--food {
+                position: relative;
+                top: -15px;
+   
+                box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.171);
+                display: flex;
+                height: fit-content;
+                flex-direction: row;
+
+                &--foods {
+                    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.171);
+                    height: 10vh;
+                    font-size: larger;
+
+                    button{
+                        position: relative;
+                        
+                        top: -50%;
+                        width: 4vw;
+                        text-align: center;
+                    }
+
+                    button {
+                        height: fit-content;
+                        cursor: pointer;
+
+                    }
+
+                    p {
+                        margin-right: 1rem;
+                        font-weight: 200;
+                    }
+                }
+            }
         }
-
-    }
-
-    .deleteFood {
-        position: relative;
-        // bottom: 0;
-
-        top: -40px;
-
     }

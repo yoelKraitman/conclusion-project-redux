@@ -17,7 +17,6 @@ mongoose.connect('mongodb+srv://yoelkraitman:Akiva2020@cluster0.vidf6.mongodb.ne
 
 import reservationRoute from "./route/customerRoute";
 app.use("/customer", reservationRoute)
-// 
 
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);

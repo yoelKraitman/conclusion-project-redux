@@ -26,12 +26,10 @@ const initialState: CustomerState = {
     value: []
 }
 export const customersSlice = createSlice({
-    name: "customer",// we can call how we want
+    name: "customer",
     initialState,
     reducers: {
-        AddClient(state, action: any) {
-            // state.value =      
-        }
+      
     },
     extraReducers: (builder) => {
         builder
@@ -64,7 +62,6 @@ export const customersSlice = createSlice({
             .addCase(deleteCustomerFromTheServer.fulfilled, (state, action: any) => {
                 state.status = Status.IDEL
                 state.value = state.value.filter((customer => customer._id != action.payload))
-                // we're going to get the elements that we want to delete from the state 
             })
             .addCase(deleteCustomerFromTheServer.rejected, (state) => {
                 state.status = Status.FAILED
@@ -97,5 +94,4 @@ export const customersSlice = createSlice({
     }
 })
 export const customers = (state: RootState) => state.customers.value;
-// export const { AddCustomer } = customersSlice.actions;
-export default customersSlice.reducer; // we need to export the all slice
+export default customersSlice.reducer; 
